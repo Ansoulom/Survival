@@ -10,7 +10,6 @@ public class ResourceUI : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (Inventory.Resources.ContainsKey(Material))
-            GetComponent<Text>().text = Inventory.Resources[Material].ToString();
+        GetComponent<Text>().text = Inventory.GetResource(Material).ToString();
     }
 }

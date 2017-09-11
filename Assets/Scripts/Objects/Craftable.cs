@@ -3,23 +3,23 @@ using UnityEngine;
 
 public abstract class Craftable : ScriptableObject
 {
-    public KeyValuePair<string, int>[] Cost;
+    public int WoodCost, StoneCost, IronCost, WaterCost;
+    public Sprite Icon;
+    public string Name;
 
     public bool CanCraft(Inventory inv)
     {
-        foreach (var pair in Cost)
-            if (!inv.Contains(pair.Key, pair.Value))
-                return false;
-        return true;
+        return inv.Contains("Wood", WoodCost) && inv.Contains("Stone", StoneCost) &&
+               inv.Contains("Iron", IronCost) && inv.Contains("Water", WaterCost);
     }
 
 
     public void Craft(Inventory inv)
     {
-        foreach (var pair in Cost)
-        {
-            inv.RemoveResource(pair.Key, pair.Value);
-        }
+        inv.RemoveResource("Wood", WoodCost);
+        inv.RemoveResource("Stone", StoneCost);
+        inv.RemoveResource("Iron", IronCost);
+        inv.RemoveResource("Water", WaterCost);
 
         Create(inv);
     }

@@ -1,4 +1,7 @@
-﻿public class WeaponCraftable : Craftable
+﻿using UnityEngine;
+
+[CreateAssetMenu(menuName = "Craftable/Weapon")]
+public class WeaponCraftable : Craftable
 {
     public Weapon Weapon;
 
