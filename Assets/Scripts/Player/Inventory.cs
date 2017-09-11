@@ -20,8 +20,6 @@ public class Inventory : MonoBehaviour
             Resources.Add(resource, count);
         else
             Resources[resource] += count;
-
-        DestroyObject(gameObject);
     }
 
 
