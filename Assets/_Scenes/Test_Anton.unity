@@ -215,6 +215,8 @@ GameObject:
   - component: {fileID: 645393288}
   - component: {fileID: 645393287}
   - component: {fileID: 645393286}
+  - component: {fileID: 645393290}
+  - component: {fileID: 645393289}
   m_Layer: 0
   m_Name: New Sprite (2)
   m_TagString: Untagged
@@ -232,7 +234,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -302,6 +304,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &645393289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 645393285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c6b4d41cba422c4eb4ede424cdf5eff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Resource: Wood
+--- !u!114 &645393290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 645393285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad2490d47c7489e40b4579d4ebbfe5b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Weapons: []
 --- !u!1 &659859042
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,7 +430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 1993224624}
-  Size: {x: 4, y: 4}
+  Size: {x: 8, y: 8}
   Offset: {x: 0, y: 0, z: 0}
   SmoothFactor: 7
 --- !u!1 &1416854978
@@ -517,6 +543,7 @@ GameObject:
   - component: {fileID: 1993224621}
   - component: {fileID: 1993224626}
   - component: {fileID: 1993224625}
+  - component: {fileID: 1993224627}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -637,3 +664,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!114 &1993224627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1993224620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad2490d47c7489e40b4579d4ebbfe5b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Weapons: []
