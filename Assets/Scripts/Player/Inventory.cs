@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public List<Weapon> Weapons;
-    public int Wood, Stone, Iron, Water;
+    public List<UsableItem> Items;
+    public int Wood, Stone, Iron;
 
 
     // Use this for initialization
     private void Start()
     {
-        Weapons = new List<Weapon>();
+        Items = new List<UsableItem>();
     }
 
 
@@ -28,9 +28,6 @@ public class Inventory : MonoBehaviour
             case "Iron":
                 Iron += count;
                 break;
-            case "Water":
-                Water += count;
-                break;
         }
     }
 
@@ -45,8 +42,6 @@ public class Inventory : MonoBehaviour
                 return Stone;
             case "Iron":
                 return Iron;
-            case "Water":
-                return Water;
             default:
                 throw new ArgumentException(resource + " is not valid.");
         }
@@ -63,8 +58,6 @@ public class Inventory : MonoBehaviour
                 return Stone >= count;
             case "Iron":
                 return Iron >= count;
-            case "Water":
-                return Water >= count;
             default:
                 return false;
         }
@@ -83,9 +76,6 @@ public class Inventory : MonoBehaviour
                 break;
             case "Iron":
                 Iron -= count;
-                break;
-            case "Water":
-                Water -= count;
                 break;
         }
     }

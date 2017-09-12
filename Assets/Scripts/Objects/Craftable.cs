@@ -3,14 +3,14 @@ using UnityEngine;
 
 public abstract class Craftable : ScriptableObject
 {
-    public int WoodCost, StoneCost, IronCost, WaterCost;
+    public int WoodCost, StoneCost, IronCost;
     public Sprite Icon;
     public string Name;
 
     public bool CanCraft(Inventory inv)
     {
         return inv.Contains("Wood", WoodCost) && inv.Contains("Stone", StoneCost) &&
-               inv.Contains("Iron", IronCost) && inv.Contains("Water", WaterCost);
+               inv.Contains("Iron", IronCost);
     }
 
 
@@ -19,7 +19,6 @@ public abstract class Craftable : ScriptableObject
         inv.RemoveResource("Wood", WoodCost);
         inv.RemoveResource("Stone", StoneCost);
         inv.RemoveResource("Iron", IronCost);
-        inv.RemoveResource("Water", WaterCost);
 
         Create(inv);
     }

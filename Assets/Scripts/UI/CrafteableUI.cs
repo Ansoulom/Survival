@@ -5,6 +5,7 @@ public class CrafteableUI : MonoBehaviour
 {
     public Craftable Item;
     public Inventory Inventory;
+    public Color CanCraftColor, CanNotCraftColor;
 
     private bool _canCraft;
 
@@ -16,10 +17,13 @@ public class CrafteableUI : MonoBehaviour
         transform.Find("WoodCost").GetComponent<Text>().text = Item.WoodCost.ToString();
         transform.Find("StoneCost").GetComponent<Text>().text = Item.StoneCost.ToString();
         transform.Find("IronCost").GetComponent<Text>().text = Item.IronCost.ToString();
-        transform.Find("WaterCost").GetComponent<Text>().text = Item.WaterCost.ToString();
 
-        _canCraft = Item.CanCraft(Inventory);
-        GetComponent<Image>().color = _canCraft ? new Color(0x52, 0x52, 0x52, 0x64) : new Color(0xB6, 0xB6, 0xB6, 0x64);
+        ChangeEnabled();
+    }
+
+    public void CraftItem()
+    {
+        Item.Craft(Inventory);
     }
 	
 
@@ -28,8 +32,15 @@ public class CrafteableUI : MonoBehaviour
     {
         if (Item.CanCraft(Inventory) != _canCraft)
         {
-            _canCraft = Item.CanCraft(Inventory);
-            GetComponent<Image>().color = _canCraft ? new Color(0x52, 0x52, 0x52, 0x64) : new Color(0xB6, 0xB6, 0xB6, 0x64);
+            ChangeEnabled();
         }
 	}
+
+
+    private void ChangeEnabled()
+    {
+        _canCraft = Item.CanCraft(Inventory);
+        GetComponent<Image>().color = _canCraft ? CanCraftColor : CanNotCraftColor;
+        transform.Find("CraftButton").GetComponent<Button>().interactable = _canCraft;
+    }
 }

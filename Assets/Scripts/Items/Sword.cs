@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [CreateAssetMenu(menuName = "Weapon/Sword")]
-public class Sword : Weapon
+public class Sword : UsableItem
 {
     public int Damage = 1;
 
