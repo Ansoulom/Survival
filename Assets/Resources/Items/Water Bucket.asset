@@ -8,8 +8,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a407f741c90529c4caeb928bf1d033e1, type: 3}
-  m_Name: Sword
+  m_Script: {fileID: 11500000, guid: f68eecd5028b9e142b0ca4aa7e4aa608, type: 3}
+  m_Name: Water Bucket
   m_EditorClassIdentifier: 
-  Icon: {fileID: 21300000, guid: f5e95e6ccb3963748b31d5080f6fa8c3, type: 3}
-  Damage: 3
+  Icon: {fileID: 21300000, guid: c87ba72ab59153546896b2121fbc3409, type: 3}
