@@ -2220,7 +2220,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300002, guid: d223d031919468146a01affe850c877e,
+      objectReference: {fileID: 21300000, guid: a0549637d7c04c249836bbce7d6bff1c,
         type: 3}
     - target: {fileID: 58802197911367554, guid: 2c73250aa0e7eb94697ee74069f4aed7,
         type: 2}
@@ -2343,6 +2343,23 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 429493055}
   m_Script: {fileID: 11500000, guid: ad2490d47c7489e40b4579d4ebbfe5b4, type: 3}
+--- !u!95 &463407176
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 463407174}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2c64de345b8ab1a4883d9b262b4e68ed, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!4 &463407181 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4878552414280048, guid: 2c73250aa0e7eb94697ee74069f4aed7,
@@ -2364,7 +2381,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.1, y: 2.8}
+    oldSize: {x: 1.94, y: 2.89}
     newSize: {x: 0.2, y: 0.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2469,7 +2486,7 @@ Prefab:
     - target: {fileID: 224144871237263116, guid: 66504f19c58269941ab48ff007e4fccb,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0.31542444
+      value: 0.3154245
       objectReference: {fileID: 0}
     - target: {fileID: 224144871237263116, guid: 66504f19c58269941ab48ff007e4fccb,
         type: 2}
