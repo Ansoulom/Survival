@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
-  Size: {x: 8, y: 8}
+  Size: {x: 5, y: 5}
   Offset: {x: 0, y: 0, z: 0}
   SmoothFactor: 7
 --- !u!124 &124302606986936052
