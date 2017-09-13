@@ -7,6 +7,7 @@ public class BuildingCraftable : Craftable
 
     protected override void Create(Inventory inv)
     {
-        Building.SetActive(true);
+        var builder = GameObject.Find("Building");
+        builder.GetComponent<BuildingBuilder>().Build(Building);
     }
 }
