@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(Rigidbody))]
 public class TopDownController : MonoBehaviour
 {
@@ -27,6 +28,15 @@ public class TopDownController : MonoBehaviour
     private void Update()
     {
         _velocity = _input * MaxSpeed;
+        var sprite = GetComponent<SpriteRenderer>();
+        if (_velocity.x > 0f)
+        {
+            sprite.flipX = false;
+        }
+        else if (_velocity.x < 0f)
+        {
+            sprite.flipX = true;
+        }
     }
 
 
