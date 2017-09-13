@@ -14,7 +14,6 @@ MonoBehaviour:
   WoodCost: 1
   StoneCost: 0
   IronCost: 0
-  WaterCost: 0
   Icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   Name: Sword
-  Weapon: {fileID: 11400000, guid: b81342f8c22393845babadf22f55a556, type: 2}
+  UsableItem: {fileID: 11400000, guid: b81342f8c22393845babadf22f55a556, type: 2}

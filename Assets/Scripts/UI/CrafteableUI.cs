@@ -17,6 +17,7 @@ public class CrafteableUI : MonoBehaviour
         transform.Find("WoodCost").GetComponent<Text>().text = Item.WoodCost.ToString();
         transform.Find("StoneCost").GetComponent<Text>().text = Item.StoneCost.ToString();
         transform.Find("IronCost").GetComponent<Text>().text = Item.IronCost.ToString();
+        transform.Find("Icon").GetComponent<Image>().sprite = Item.Icon;
 
         ChangeEnabled();
     }

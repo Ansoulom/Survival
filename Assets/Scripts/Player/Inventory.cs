@@ -4,16 +4,24 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public List<UsableItem> Items;
+    public InventorySlot[] Items;
     public int Wood, Stone, Iron;
 
 
-    // Use this for initialization
-    private void Start()
+    private void Awake()
     {
-        Items = new List<UsableItem>();
+        Items = new InventorySlot[7]; // TODO: Magic number
+        for (var i = 0; i < Items.Length; ++i)
+        {
+            Items[i] = new InventorySlot();
+        }
     }
 
+
+    private void Start()
+    {
+        
+    }
 
     public void AddResource(string resource, int count = 1)
     {
@@ -77,6 +85,19 @@ public class Inventory : MonoBehaviour
             case "Iron":
                 Iron -= count;
                 break;
+        }
+    }
+
+
+    public void AddItem(UsableItem item)
+    {
+        foreach (var slot in Items)
+        {
+            if (slot.Item == null)
+            {
+                slot.Item = item;
+                return;
+            }
         }
     }
 }
