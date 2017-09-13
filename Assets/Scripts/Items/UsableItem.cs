@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public abstract class Weapon : ScriptableObject
+public abstract class UsableItem : ScriptableObject
 {
     public abstract void Use();
 }

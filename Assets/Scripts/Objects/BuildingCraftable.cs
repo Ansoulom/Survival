@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+[CreateAssetMenu(menuName = "Craftable/Building")]
 public class BuildingCraftable : Craftable
 {
     public GameObject Building;

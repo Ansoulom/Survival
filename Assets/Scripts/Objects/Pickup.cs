@@ -8,6 +8,9 @@ public class Pickup : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
-            GetComponent<Inventory>().AddResource(Resource);
+        {
+            other.GetComponent<Inventory>().AddResource(Resource);
+            DestroyObject(gameObject);
+        }
     }
 }
