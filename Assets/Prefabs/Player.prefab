@@ -25,7 +25,9 @@ GameObject:
   - component: {fileID: 58802197911367554}
   - component: {fileID: 50762425423308974}
   - component: {fileID: 114445333744921642}
-  m_Layer: 0
+  - component: {fileID: 114192169965951284}
+  - component: {fileID: 114526619890172382}
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -80,6 +82,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!114 &114192169965951284
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1358634443975160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26ee04c032f938f40b38b9ece11a7ea6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 5
+  EnemyLayers:
+    serializedVersion: 2
+    m_Bits: 512
+  AttackRange: 10
+  AttackWidth: 0.25
 --- !u!114 &114445333744921642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -94,6 +113,17 @@ MonoBehaviour:
   Wood: 0
   Stone: 0
   Iron: 0
+--- !u!114 &114526619890172382
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1358634443975160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95a8acb872e867045a911522856d7609, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114687131687761264
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -117,6 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 922cb17e0c7ae4e4c92de33fe2eeff87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CheatsEnabled: 0
 --- !u!212 &212392728801739996
 SpriteRenderer:
   m_ObjectHideFlags: 1

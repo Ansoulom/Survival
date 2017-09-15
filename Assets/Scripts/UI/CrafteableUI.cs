@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class CrafteableUI : MonoBehaviour
 {
     public Craftable Item;
-    public Inventory Inventory;
+    public Inventory Inventory { get; set; }
     public Color CanCraftColor, CanNotCraftColor;
 
     private bool _canCraft;
@@ -12,6 +12,12 @@ public class CrafteableUI : MonoBehaviour
 
 	// Use this for initialization
 	private void Start ()
+    {
+        UpdateUI();
+    }
+
+
+    private void UpdateUI()
     {
         transform.Find("Name").GetComponent<Text>().text = Item.Name;
         transform.Find("WoodCost").GetComponent<Text>().text = Item.WoodCost.ToString();
@@ -22,9 +28,20 @@ public class CrafteableUI : MonoBehaviour
         ChangeEnabled();
     }
 
+
     public void CraftItem()
     {
-        Item.Craft(Inventory);
+        var upgrade = Item.Craft(Inventory);
+        if (upgrade)
+        {
+            Item = upgrade;
+            UpdateUI();
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
+        
     }
 	
 

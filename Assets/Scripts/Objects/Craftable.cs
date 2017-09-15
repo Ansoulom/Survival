@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public abstract class Craftable : ScriptableObject
 {
     public int WoodCost, StoneCost, IronCost;
     public Sprite Icon;
     public string Name;
+    public Craftable Upgrade;
 
     public bool CanCraft(Inventory inv)
     {
@@ -14,13 +14,14 @@ public abstract class Craftable : ScriptableObject
     }
 
 
-    public void Craft(Inventory inv)
+    public Craftable Craft(Inventory inv)
     {
         inv.RemoveResource("Wood", WoodCost);
         inv.RemoveResource("Stone", StoneCost);
         inv.RemoveResource("Iron", IronCost);
 
         Create(inv);
+        return Upgrade;
     }
 
 

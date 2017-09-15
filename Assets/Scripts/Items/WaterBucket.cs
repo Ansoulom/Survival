@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Item/HealingItem")]
 public class WaterBucket : UsableItem
 {
-    public override void Use()
+    public override bool Use(Inventory user)
     {
         throw new System.NotImplementedException();
     }
