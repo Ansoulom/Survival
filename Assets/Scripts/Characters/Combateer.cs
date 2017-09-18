@@ -7,10 +7,14 @@ public class Combateer : MonoBehaviour
     public float AttackWidth = 0.25f;
     public LayerMask EnemyLayers;
     public float Cooldown = 1f;
+    public float KnockbackTime = 0.3f;
+    public float KnockbackDistance = 20f;
     public int Health;
     public int MaxHealth = 5;
 
     private Timer _cooldownTimer;
+    private Timer _knockbackTimer;
+    private bool _stunned;
 
 
     private void Awake()
@@ -29,6 +33,16 @@ public class Combateer : MonoBehaviour
     private void Update()
     {
         _cooldownTimer.Update(Time.deltaTime);
+        if (_stunned)
+        {
+            if (_knockbackTimer.Update(Time.deltaTime))
+            {
+                _stunned = false;
+                GetComponent<CharacterInput>().enabled = true;
+                GetComponent<TopDownController>().Velocity = Vector2.zero;
+                GetComponent<TopDownController>().UsesInput = true;
+            }
+        }
     }
 
 
@@ -47,7 +61,11 @@ public class Combateer : MonoBehaviour
         {
             var target = collision.GetComponent<Combateer>();
             if (target)
+            {
                 target.TakeDamage(damage);
+                var distance = (target.transform.position - transform.position).normalized * KnockbackDistance;
+                target.TakeKnockback(new Vector2(distance.x, distance.y), KnockbackTime);
+            }
         }
     }
 
@@ -57,6 +75,17 @@ public class Combateer : MonoBehaviour
         Health -= damage;
         if (Health <= 0)
             Kill();
+    }
+
+
+    private void TakeKnockback(Vector2 distance, float time)
+    {
+        var velocity = distance / time;
+        GetComponent<CharacterInput>().enabled = false;
+        GetComponent<TopDownController>().Velocity = velocity;
+        GetComponent<TopDownController>().UsesInput = false;
+        _knockbackTimer = new Timer(time);
+        _stunned = true;
     }
 
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(TopDownController))]
-public class ZombieInput : MonoBehaviour
+public class ZombieInput : CharacterInput
 {
     public float AggroRange = 3f;
     public float DeaggroRange = 5f;

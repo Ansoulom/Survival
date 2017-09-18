@@ -237,7 +237,9 @@ MonoBehaviour:
   EnemyLayers:
     serializedVersion: 2
     m_Bits: 256
-  Cooldown: 1
+  Cooldown: 0.25
+  KnockbackTime: 0.2
+  KnockbackDistance: 4
   Health: 0
   MaxHealth: 5
 --- !u!114 &114606880485706282

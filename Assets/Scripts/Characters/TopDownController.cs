@@ -6,9 +6,10 @@ public class TopDownController : MonoBehaviour
 {
     private Vector2 _input;
 
-    private Vector2 _velocity;
+    public Vector2 Velocity { get; set; }
     public float MaxSpeed = 5f;
     public Vector2 Direction { get; private set; }
+    public bool UsesInput { get; set; }
 
 
     public Vector2 Input
@@ -22,21 +23,27 @@ public class TopDownController : MonoBehaviour
     }
 
 
+    private void Awake()
+    {
+        UsesInput = true;
+    }
+
+
     // Use this for initialization
     private void Start()
     {
-        _velocity = Vector2.zero;
+        Velocity = Vector2.zero;
     }
 
 
     // Update is called once per frame
     private void Update()
     {
-        _velocity = _input * MaxSpeed;
+        if(UsesInput) Velocity = _input * MaxSpeed;
         var sprite = GetComponent<SpriteRenderer>();
-        if (_velocity.x > 0f)
+        if (Velocity.x > 0f)
             sprite.flipX = false;
-        else if (_velocity.x < 0f)
+        else if (Velocity.x < 0f)
             sprite.flipX = true;
     }
 
@@ -50,6 +57,6 @@ public class TopDownController : MonoBehaviour
 
     private void Move()
     {
-        transform.position += new Vector3(_velocity.x, _velocity.y, 0f) * Time.deltaTime;
+        transform.position += new Vector3(Velocity.x, Velocity.y, 0f) * Time.deltaTime;
     }
 }

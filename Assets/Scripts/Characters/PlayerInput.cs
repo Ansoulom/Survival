@@ -3,9 +3,9 @@
 
 [RequireComponent(typeof(Inventory))]
 [RequireComponent(typeof(TopDownController))]
-public class PlayerInput : MonoBehaviour
+public class PlayerInput : CharacterInput
 {
-    public bool CheatsEnabled = false;
+    public bool CheatsEnabled;
 
     private TopDownController _controller;
 
