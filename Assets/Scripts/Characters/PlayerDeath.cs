@@ -17,6 +17,5 @@ public class PlayerDeath : DeathComponent
 
     public override void Kill()
     {
-        Debug.Log("Player just died.");
     }
 }
