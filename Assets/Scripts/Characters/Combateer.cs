@@ -1,21 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(DeathComponent))]
 public class Combateer : MonoBehaviour
 {
-    public int MaxHealth = 5;
-    public LayerMask EnemyLayers;
     public float AttackRange = 1f;
     public float AttackWidth = 0.25f;
+    public LayerMask EnemyLayers;
 
-    private int _health;
+    public int Health;
+    public int MaxHealth = 5;
 
-	// Use this for initialization
-	private void Start ()
+
+    // Use this for initialization
+    private void Start()
     {
-        _health = MaxHealth;
+        Health = MaxHealth;
     }
 
 
@@ -31,20 +30,16 @@ public class Combateer : MonoBehaviour
         {
             var target = collision.GetComponent<Combateer>();
             if (target)
-            {
                 target.TakeDamage(damage);
-            }
         }
     }
 
 
     private void TakeDamage(int damage)
     {
-        _health -= damage;
-        if (_health <= 0)
-        {
+        Health -= damage;
+        if (Health <= 0)
             Kill();
-        }
     }
 
 
