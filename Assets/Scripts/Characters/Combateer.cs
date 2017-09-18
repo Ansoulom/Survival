@@ -6,9 +6,17 @@ public class Combateer : MonoBehaviour
     public float AttackRange = 1f;
     public float AttackWidth = 0.25f;
     public LayerMask EnemyLayers;
-
+    public float Cooldown = 1f;
     public int Health;
     public int MaxHealth = 5;
+
+    private Timer _cooldownTimer;
+
+
+    private void Awake()
+    {
+        _cooldownTimer = new Timer(Cooldown);
+    }
 
 
     // Use this for initialization
@@ -18,9 +26,18 @@ public class Combateer : MonoBehaviour
     }
 
 
+    private void Update()
+    {
+        _cooldownTimer.Update(Time.deltaTime);
+    }
+
+
     public void Attack(int damage)
     {
+        if (!_cooldownTimer.IsDone) return;
+
         // TODO: Add animation here
+        _cooldownTimer.Reset();
         var direction = GetComponent<TopDownController>().Direction;
         var collisions =
             Physics2D.OverlapBoxAll(
