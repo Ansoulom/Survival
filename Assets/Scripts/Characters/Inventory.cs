@@ -112,4 +112,16 @@ public class Inventory : MonoBehaviour
                 return;
             }
     }
+
+
+    public bool RemoveItem(string itemName)
+    {
+        foreach (var slot in Items)
+            if (slot.Item != null && slot.Item.Name == itemName)
+            {
+                slot.Item = null;
+                return true;
+            }
+        return false;
+    }
 }

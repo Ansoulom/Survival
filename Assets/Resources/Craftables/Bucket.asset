@@ -9,13 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6a30166e1ae1f44da8213e7fd10e9f6, type: 3}
-  m_Name: Sword
+  m_Name: Bucket
   m_EditorClassIdentifier: 
-  WoodCost: 1
+  WoodCost: 0
   StoneCost: 0
-  IronCost: 2
-  Icon: {fileID: 21300000, guid: f5e95e6ccb3963748b31d5080f6fa8c3, type: 3}
-  Name: Sword
+  IronCost: 3
+  Icon: {fileID: 21300000, guid: 3473ed66a7a35be409e0322219c9d668, type: 3}
+  Name: Bucket
   Upgrade: {fileID: 0}
-  Replaces: Axe
-  UsableItem: {fileID: 11400000, guid: b81342f8c22393845babadf22f55a556, type: 2}
+  Replaces: 
+  UsableItem: {fileID: 11400000, guid: 79a50aed94ba6f442a3f720e4f7255b1, type: 2}

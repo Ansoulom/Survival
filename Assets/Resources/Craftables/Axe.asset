@@ -16,4 +16,6 @@ MonoBehaviour:
   IronCost: 0
   Icon: {fileID: 21300000, guid: bbd8ff1cdc0633a40b6559a545f398d1, type: 3}
   Name: Axe
+  Upgrade: {fileID: 11400000, guid: 0665fefb83785e542b4fbcc27805cb97, type: 2}
+  Replaces: 
   UsableItem: {fileID: 11400000, guid: 60a721e3f66f5b14b979e5d4adb00a44, type: 2}

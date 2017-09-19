@@ -12,6 +12,7 @@ public class Combateer : MonoBehaviour
     public float KnockbackDistance = 20f;
     public int Health;
     public int MaxHealth = 5;
+    public bool Invincible;
 
     private Timer _cooldownTimer;
     private Timer _knockbackTimer;
@@ -47,6 +48,12 @@ public class Combateer : MonoBehaviour
     }
 
 
+    public void RestoreHealth()
+    {
+        Health = MaxHealth;
+    }
+
+
     public void Attack(int damage)
     {
         if (!_cooldownTimer.IsDone) return;
@@ -74,6 +81,7 @@ public class Combateer : MonoBehaviour
 
     private void TakeDamage(int damage)
     {
+        if (Invincible) return;
         InstantiatedAudioPlayer.PlaySound(GetComponents<AudioClipData>()[1], transform.position);
         Health -= damage;
         if (Health <= 0)

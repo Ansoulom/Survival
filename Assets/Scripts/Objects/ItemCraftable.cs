@@ -7,6 +7,7 @@ public class ItemCraftable : Craftable
 
     protected override void Create(Inventory inv)
     {
+        inv.RemoveItem(Replaces);
         inv.AddItem(Instantiate(UsableItem));
     }
 }

@@ -11,5 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a407f741c90529c4caeb928bf1d033e1, type: 3}
   m_Name: Axe
   m_EditorClassIdentifier: 
+  Name: Axe
   Icon: {fileID: 21300000, guid: bbd8ff1cdc0633a40b6559a545f398d1, type: 3}
   Damage: 1

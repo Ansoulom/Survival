@@ -16,4 +16,6 @@ MonoBehaviour:
   IronCost: 0
   Icon: {fileID: 21300000, guid: ab31be8945a46d247991f3479cae600a, type: 3}
   Name: Stone House
+  Upgrade: {fileID: 0}
+  Replaces: Wood House
   Building: {fileID: 1032116913474346, guid: deaf93da916a1c64e9c8dd443df8b847, type: 2}
