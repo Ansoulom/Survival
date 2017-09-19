@@ -30,6 +30,8 @@ GameObject:
   - component: {fileID: 60011719099513636}
   - component: {fileID: 95312267457964002}
   - component: {fileID: 58786460308301488}
+  - component: {fileID: 114267789325469922}
+  - component: {fileID: 114751826920272382}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -234,6 +236,22 @@ MonoBehaviour:
   KnockbackDistance: 4
   Health: 0
   MaxHealth: 5
+--- !u!114 &114267789325469922
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1358634443975160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e16e13eacf025b43aee614f8e6ec609, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Clip: {fileID: 11400000, guid: 0b1a0529986cd714f9d0e182d3e950af, type: 2}
+  MinVolume: 0.7
+  MaxVolume: 1
+  MinPitch: 0.85
+  MaxPitch: 1.15
 --- !u!114 &114445333744921642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -271,6 +289,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxSpeed: 5
+--- !u!114 &114751826920272382
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1358634443975160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e16e13eacf025b43aee614f8e6ec609, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Clip: {fileID: 11400000, guid: d925691cbf4b0504b9c7976b7c088793, type: 2}
+  MinVolume: 1
+  MaxVolume: 1
+  MinPitch: 1
+  MaxPitch: 1
 --- !u!114 &114912972926740336
 MonoBehaviour:
   m_ObjectHideFlags: 1

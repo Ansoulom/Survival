@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(AudioClipData))]
 [RequireComponent(typeof(DeathComponent))]
 public class Combateer : MonoBehaviour
 {
@@ -50,6 +51,7 @@ public class Combateer : MonoBehaviour
     {
         if (!_cooldownTimer.IsDone) return;
 
+        InstantiatedAudioPlayer.PlaySound(GetComponent<AudioClipData>(), transform.position);
         // TODO: Add animation here
         _cooldownTimer.Reset();
         var direction = GetComponent<TopDownController>().Direction;
@@ -72,6 +74,7 @@ public class Combateer : MonoBehaviour
 
     private void TakeDamage(int damage)
     {
+        InstantiatedAudioPlayer.PlaySound(GetComponents<AudioClipData>()[1], transform.position);
         Health -= damage;
         if (Health <= 0)
             Kill();
