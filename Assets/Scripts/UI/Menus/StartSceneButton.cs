@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TryAgainButton : MonoBehaviour
+public class StartSceneButton : MonoBehaviour
 {
     public string Scene;
 
