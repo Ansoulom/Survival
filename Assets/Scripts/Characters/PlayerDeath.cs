@@ -1,11 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine.SceneManagement;
 
 public class PlayerDeath : DeathComponent
 {
+    public string DeathScene;
+
 
     public override void Kill()
     {
+        SceneManager.LoadScene(DeathScene);
     }
 }

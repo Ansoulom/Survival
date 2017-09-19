@@ -31,6 +31,7 @@ GameObject:
   - component: {fileID: 58786460308301488}
   - component: {fileID: 114267789325469922}
   - component: {fileID: 114751826920272382}
+  - component: {fileID: 114547870413095206}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -83,9 +84,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.5}
+  m_Offset: {x: 0, y: -1.15}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 0.5
 --- !u!60 &60011719099513636
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -211,7 +212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttackRange: 3.5
-  AttackWidth: 0.25
+  AttackWidth: 1
   EnemyLayers:
     serializedVersion: 2
     m_Bits: 512
@@ -220,6 +221,7 @@ MonoBehaviour:
   KnockbackDistance: 4
   Health: 0
   MaxHealth: 5
+  Invincible: 0
 --- !u!114 &114267789325469922
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -261,6 +263,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95a8acb872e867045a911522856d7609, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DeathScene: Death screen
+--- !u!114 &114547870413095206
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1358634443975160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c4f6c931e6d3db458eafdb492994d6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dynamic: 1
+  PivotOffset: -1.48
 --- !u!114 &114687131687761264
 MonoBehaviour:
   m_ObjectHideFlags: 1

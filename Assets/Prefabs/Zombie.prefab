@@ -30,6 +30,7 @@ GameObject:
   - component: {fileID: 58342247259410122}
   - component: {fileID: 114251315423768012}
   - component: {fileID: 114517350992607568}
+  - component: {fileID: 114049400283164226}
   m_Layer: 9
   m_Name: Zombie
   m_TagString: Untagged
@@ -82,9 +83,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.5}
+  m_Offset: {x: 0, y: -1.06}
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 0.5
 --- !u!60 &60055878162756422
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -198,6 +199,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114049400283164226
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1160504819697460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c4f6c931e6d3db458eafdb492994d6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dynamic: 1
+  PivotOffset: -1.34
 --- !u!114 &114117608744183462
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -251,15 +265,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttackRange: 2.5
-  AttackWidth: 0.25
+  AttackWidth: 1
   EnemyLayers:
     serializedVersion: 2
     m_Bits: 256
-  Cooldown: 0.5
+  Cooldown: 1
   KnockbackTime: 0.2
   KnockbackDistance: 4
   Health: 0
   MaxHealth: 5
+  Invincible: 0
 --- !u!114 &114517350992607568
 MonoBehaviour:
   m_ObjectHideFlags: 1

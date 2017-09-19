@@ -91,6 +91,7 @@ public class Combateer : MonoBehaviour
 
     private void TakeKnockback(Vector2 distance, float time)
     {
+        if (Invincible) return;
         var velocity = distance / time;
         GetComponent<CharacterInput>().enabled = false;
         GetComponent<TopDownController>().Velocity = velocity;
