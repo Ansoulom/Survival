@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
+[RequireComponent(typeof(AudioClipData))]
 public class Pickup : MonoBehaviour
 {
     public string Resource;
@@ -10,6 +11,7 @@ public class Pickup : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.GetComponent<Inventory>().AddResource(Resource);
+            InstantiatedAudioPlayer.PlaySound(GetComponent<AudioClipData>(), transform.position);
             DestroyObject(gameObject);
         }
     }

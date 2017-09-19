@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212929004845529088}
   - component: {fileID: 61978895243473712}
   - component: {fileID: 114131051182977340}
+  - component: {fileID: 114217335106754542}
   m_Layer: 0
   m_Name: Wood
   m_TagString: Untagged
@@ -79,6 +80,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Resource: Wood
+--- !u!114 &114217335106754542
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1289746227883436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e16e13eacf025b43aee614f8e6ec609, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Clip: {fileID: 11400000, guid: 222a4342ffa2dae4698b358c38267dd9, type: 2}
+  MinVolume: 0.8
+  MaxVolume: 1
+  MinPitch: 0.9
+  MaxPitch: 1.1
 --- !u!212 &212929004845529088
 SpriteRenderer:
   m_ObjectHideFlags: 1
