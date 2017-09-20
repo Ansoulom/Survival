@@ -6,6 +6,7 @@ public abstract class Craftable : ScriptableObject
     public Sprite Icon;
     public string Name;
     public Craftable Upgrade;
+    public string Replaces;
 
     public bool CanCraft(Inventory inv)
     {

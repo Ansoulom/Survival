@@ -20,7 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4938006487768470}
   - component: {fileID: 212191875562464954}
-  - component: {fileID: 60673105800197452}
+  - component: {fileID: 114950500414176764}
+  - component: {fileID: 60202031469280914}
   m_Layer: 0
   m_Name: Tent
   m_TagString: Untagged
@@ -71,7 +72,7 @@ Transform:
   m_Father: {fileID: 4336398463638962}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &60673105800197452
+--- !u!60 &60202031469280914
 PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -95,26 +96,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.98999995, y: -0.56}
-      - {x: 0.84999996, y: -0.35999998}
-      - {x: 0.77, y: -0.24}
-      - {x: 0.76, y: -0.21}
-      - {x: 0.71999997, y: -0.14999999}
-      - {x: 0.59999996, y: 0.02}
-      - {x: 0.56, y: 0.07}
-      - {x: -0.25, y: 0.07}
-      - {x: -0.26999998, y: 0.06}
-      - {x: -0.32, y: -0.02}
-      - {x: -0.35999998, y: -0.08}
-      - {x: -0.56, y: -0.39}
-      - {x: -0.64, y: -0.51}
-      - {x: -0.71999997, y: -0.62}
-      - {x: -0.74, y: -0.66999996}
-      - {x: -0.71999997, y: -0.69}
-      - {x: 1.03, y: -0.69}
-      - {x: 1.05, y: -0.66999996}
-      - {x: 1.05, y: -0.65999997}
-      - {x: 1.03, y: -0.62}
+    - - {x: 1.0403335, y: -0.67034644}
+      - {x: -0.716143, y: -0.6658723}
+      - {x: -0.41089886, y: -0.1974102}
+      - {x: 0.72902554, y: -0.19644873}
 --- !u!114 &114105254315900102
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -127,6 +112,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentBuilding: {fileID: 1331819509102874}
+--- !u!114 &114950500414176764
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1331819509102874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c4f6c931e6d3db458eafdb492994d6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dynamic: 0
+  PivotOffset: -0.66
 --- !u!212 &212191875562464954
 SpriteRenderer:
   m_ObjectHideFlags: 1

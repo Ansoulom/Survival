@@ -45,5 +45,9 @@ public class PlayerInput : CharacterInput
         {
             inventory.AddResource("Iron");
         }
+        if (Input.GetKeyDown(KeyCode.I) && Input.GetKey(KeyCode.LeftShift))
+        {
+            GetComponent<Combateer>().Invincible = !GetComponent<Combateer>().Invincible;
+        }
     }
 }

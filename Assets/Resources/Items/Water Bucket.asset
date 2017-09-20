@@ -11,4 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f68eecd5028b9e142b0ca4aa7e4aa608, type: 3}
   m_Name: Water Bucket
   m_EditorClassIdentifier: 
+  Name: Water Bucket
   Icon: {fileID: 21300000, guid: c87ba72ab59153546896b2121fbc3409, type: 3}
+  CreatesItem: {fileID: 11400000, guid: 79a50aed94ba6f442a3f720e4f7255b1, type: 2}
