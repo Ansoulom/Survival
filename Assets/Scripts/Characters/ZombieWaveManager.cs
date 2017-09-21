@@ -27,5 +27,10 @@ public class ZombieWaveManager : MonoBehaviour
             Counting = false;
             Prompt.Activate();
         }
+
+        if (GetComponentsInChildren<ZombieInput>().Length < 1)
+        {
+            Prompt.Activate("You survived!");
+        }
 	}
 }

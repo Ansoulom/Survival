@@ -28,8 +28,13 @@ public class UIPrompt : MonoBehaviour
 
     public void Activate()
     {
+        Activate(Text);
+    }
+
+    public void Activate(string text)
+    {
         _active = true;
         _activeTimer.Reset();
-        GetComponent<Text>().text = Text;
+        GetComponent<Text>().text = text;
     }
 }
