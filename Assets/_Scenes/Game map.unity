@@ -4078,7 +4078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1e3bded7600104182ddb6e5dc0e6c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToWave: 3
+  TimeToWave: 120
   Counting: 1
   Prompt: {fileID: 1381943518}
 --- !u!4 &900147776
