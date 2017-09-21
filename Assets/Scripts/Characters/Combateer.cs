@@ -59,7 +59,9 @@ public class Combateer : MonoBehaviour
         if (!_cooldownTimer.IsDone) return;
 
         InstantiatedAudioPlayer.PlaySound(GetComponent<AudioClipData>(), transform.position);
-        // TODO: Add animation here
+        
+        GetComponent<Animator>().SetTrigger("Attacking");
+
         _cooldownTimer.Reset();
         var direction = GetComponent<TopDownController>().Direction;
         var collisions =

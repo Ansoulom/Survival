@@ -19,6 +19,8 @@ public class BuildingBuilder : MonoBehaviour
     public void Build(GameObject building)
     {
         DestroyObject(CurrentBuilding);
-        CurrentBuilding = Instantiate(building, transform);
+        CurrentBuilding = Instantiate(building);
+        CurrentBuilding.transform.position = transform.position;
+        CurrentBuilding.transform.SetParent(transform);
     }
 }
